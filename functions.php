@@ -19,11 +19,8 @@
     <div class="container">
         <h1><?php echo TITLE; ?></h1>
      <!-- REVIEW: Arrays allows you to store multible values in a varible -->
-        
-            <?php
-        
-                echo $employees[1]["fullname"] ."<br>";
-            ?>
+        <p class="lead">Hate clickbait? Turn those annoying headlines into realistic and honest ones using a simple program.</p>
+           
       
     </div> <!-- container -->
       
