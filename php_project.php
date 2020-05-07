@@ -39,6 +39,12 @@
             "boring",
             "normal"
         );
+        
+        //  use str_replace() function to replace words
+        //  uppercase the first letter in everyword using ucworks() function
+        //  store in a variable
+        
+            $honestHeadline = str_replace( $a, $b, $clickBait );
     }
 ?>
 
@@ -68,7 +74,12 @@
             </form>
         
         </div>
-           
+           <?php
+            if (isset( $_POST["fix_submit"]) ) {
+                echo $honestHeadline;
+            };
+        
+            ?>
       
     </div> <!-- container -->
       
