@@ -1,5 +1,45 @@
 <?php 
     define("TITLE", "PHP Project"); 
+
+    if( isset( $_POST["fix_submit"]) ) {
+        // grab value from textarea in $_POST collection
+        // make all letters lowercase using strtolower() function
+        // store in a variable
+        $clickBait = strtolower( $_POST["clickbait_headline"] );
+        
+        // store array of clickbait-sounding words or phrases
+        $a = array(
+            "scientists",
+            "doctor",
+            "hate",
+            "stupid",
+            "weird",
+            "simple",
+            "tricked",
+            "shocked me",
+            "you'll never believe",
+            "hack",
+            "epic",
+            "unbelievable"
+        );
+        //  store array of replacement words or phrases
+        /*  make sure each replacement is in the same order as the 
+            clickbait word you are trying to replace */
+        $b = array(
+            "so-called scientists",
+            "so-called doctors",
+            "aren't threatened by",
+            "average",
+            "completely normal",
+            "ineffective",
+            "method",
+            "is no different than the doctors",
+            "you won't really be surprised by",
+            "slightly improved",
+            "boring",
+            "normal"
+        );
+    }
 ?>
 
 <!Doctype html>
@@ -23,7 +63,7 @@
         
         <div class="row col-md-8 offset-md-2">
             <form class="col-sm-10 col-sm-offset-2" action="" method="post">
-                <textarea placeholder="Paste clickbait headline here..." class="form-control input-lg" name="clickbait_headline"></textarea>
+                <textarea placeholder="Paste clickbait headline here..." class="form-control input-lg" name="clickbait_headline"></textarea><br>
                 <button type="submit" class="btn btn-primary btn-lg float-right" name="fix_submit">Make Honest!</button>
             </form>
         
