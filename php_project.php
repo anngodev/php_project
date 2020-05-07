@@ -33,7 +33,7 @@
             "completely normal",
             "ineffective",
             "method",
-            "is no different than the doctors",
+            "is no different than the others",
             "you won't really be surprised by",
             "slightly improved",
             "boring",
@@ -76,7 +76,12 @@
         </div>
            <?php
             if (isset( $_POST["fix_submit"]) ) {
-                echo $honestHeadline;
+                // use ucwords() function to uppercase first letter of every work
+                // echo the variable on screen
+                echo "<strong class='text-danger'>Original Headline</strong><h4>".ucwords($clickBait)."</h4><hr>";
+                
+                // echo the honest headline on screen
+                echo "<strong class='text-success'>Honest Headline</strong><h4>".ucwords($honestHeadline)."</h4>";
             };
         
             ?>
