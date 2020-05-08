@@ -9,7 +9,7 @@
         
         // store array of clickbait-sounding words or phrases
         $a = array(
-            "scientists",
+            "scientist",
             "doctor",
             "hate",
             "stupid",
@@ -26,8 +26,8 @@
         /*  make sure each replacement is in the same order as the 
             clickbait word you are trying to replace */
         $b = array(
-            "so-called scientists",
-            "so-called doctors",
+            "so-called scientist",
+            "so-called doctor",
             "aren't threatened by",
             "average",
             "completely normal",
