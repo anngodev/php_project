@@ -49,7 +49,9 @@
         // return an array of the variables so we can access them globally
         return array($clickBait, $honestHeadline);
     };
-
+    
+    // this function requires two parameters
+    /* the values of the parameters will be values of the returned array in the previous function */
     function displayHonestHeadline( $x, $y ) {
         // use ucwords() function to uppercase first letter of every work
         // echo the variable on screen
