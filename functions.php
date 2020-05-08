@@ -1,7 +1,7 @@
 <?php 
 // functions.php
 
-    if( isset( $_POST["fix_submit"]) ) {
+    function checkForClickBait() {
         // grab value from textarea in $_POST collection
         // make all letters lowercase using strtolower() function
         // store in a variable
@@ -45,5 +45,17 @@
         //  store in a variable
         
             $honestHeadline = str_replace( $a, $b, $clickBait );
-    }
+        
+        // return an array of the variables so we can access them globally
+        return array($clickBait, $honestHeadline);
+    };
+
+    function displayHonestHeadline( $x, $y ) {
+        // use ucwords() function to uppercase first letter of every work
+        // echo the variable on screen
+        echo "<strong class='text-danger'>Original Headline</strong><h4>".ucwords($x)."</h4><hr>";
+
+        // echo the honest headline on screen
+        echo "<strong class='text-success'>Honest Headline</strong><h4>".ucwords($y)."</h4>";
+                };
 ?>

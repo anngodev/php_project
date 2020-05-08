@@ -1,6 +1,12 @@
 <?php 
     define("TITLE", "PHP Project");
     include("functions.php");
+
+    if( isset( $_POST["fix_submit"] ) ) {
+        // Call function
+        checkForClickBait();
+        
+    }
 ?>
 
 <!Doctype html>
@@ -29,16 +35,23 @@
             </form>
         
         </div>
-           <?php
-            if (isset( $_POST["fix_submit"]) ) {
-                // use ucwords() function to uppercase first letter of every work
-                // echo the variable on screen
-                echo "<strong class='text-danger'>Original Headline</strong><h4>".ucwords($clickBait)."</h4><hr>";
-                
-                // echo the honest headline on screen
-                echo "<strong class='text-success'>Honest Headline</strong><h4>".ucwords($honestHeadline)."</h4>";
-            };
         
+           <?php
+            if ( isset( $_POST["fix_submit"] ) ) {
+                // get first value from array returned by checkForClickBait() function
+                // store it in a variable
+                
+                // this is not same variable (can be called anything this is just for consistency)
+                $clickBait = checkForClickBait()[0];
+                
+                // get second value from array returned by checkForClickBait() function
+                // store it in a variable
+                $honestHeadline = checkForClickBait()[1];
+                
+                // call function
+                // pass two arguments in the functions
+                displayHonestHeadline( $clickBait, $honestHeadline );
+            };
             ?>
       
     </div> <!-- container -->
